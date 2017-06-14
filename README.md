@@ -43,16 +43,19 @@ Before we learn about the second normal form, we need to understand the followin
 If we follow second normal form, then every non-prime attribute should be fully functionally dependent on prime key attribute. That is, if X → A holds, then there should not be any proper subset Y of X, for which Y → A also holds true.
 
 Student_Project
+
 | stu_id | pro_id  | stu_name  | pro_name  |
 | ------ | -------  | -------  | -------  |
 
 We see here in Student_Project relation that the prime key attributes are Stu_ID and Proj_ID. According to the rule, non-key attributes, i.e. Stu_Name and Proj_Name must be dependent upon both and not on any of the prime key attribute individually. But we find that Stu_Name can be identified by Stu_ID and Proj_Name can be identified by Proj_ID independently. This is called partial dependency, which is not allowed in Second Normal Form.
 
 Student
+
 | stu_id | pro_id  | stu_name  |
 | ------ | -------  | -------  |
 
 Project
+
 | pro_id  | pro_name  |
 | ------ | -------  |
 
@@ -67,6 +70,7 @@ For a relation to be in Third Normal Form, it must be in Second Normal form and 
     * A is prime attribute.
 
 Student_Detail
+
 | Stu_id | Stu_name | City | Zip |
 | ------ | -------  | -------  | -------  |
 
@@ -75,9 +79,11 @@ We find that in the above Student_detail relation, Stu_ID is the key and only pr
 To bring this relation into third normal form, we break the relation into two relations as follows −
 
 Student_Detail
+
 | Stu_id | Stu_name | Zip |
 | ------ | -------  | -------  |
 
 Zip_Codes
+
 | Zip | City |
 | ------ | -------  |
